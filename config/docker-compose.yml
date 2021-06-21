@@ -1,0 +1,18 @@
+version: '3'
+services:
+  db-dev:
+    image: postgres:12.3
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=lms_db_dev
+    ports:
+      - 15432:5432
+  db-test:
+    image: postgres:12.3
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=lms_db_test
+    ports:
+      - 25432:5432

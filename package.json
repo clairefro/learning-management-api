@@ -7,10 +7,11 @@
   "scripts": {
     "start": "nodemon",
     "tcheck": "tsc --noEmit",
-    "db:dev": "docker-compose -f ./config/docker-compose.yml up -d",
+    "db:start": "docker-compose -f ./config/docker-compose.yml up -d",
     "build": "tsc",
     "serve": "node dist/src/index.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "psql": "docker exec -ti lms-db-dev psql -U postgres lms_db_dev"
   },
   "dependencies": {
     "express": "4.17.1"

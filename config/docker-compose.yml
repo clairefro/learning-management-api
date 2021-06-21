@@ -2,6 +2,7 @@ version: '3'
 services:
   db-dev:
     image: postgres:12.3
+    container_name: lms-db-dev
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
@@ -10,6 +11,7 @@ services:
       - 15432:5432
   db-test:
     image: postgres:12.3
+    container_name: lms-db-test
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
